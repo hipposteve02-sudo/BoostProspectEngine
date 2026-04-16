@@ -18,11 +18,8 @@ h1{font-size:15px;font-weight:600;margin-bottom:4px;color:#1a1a1a}
 #map-svg{width:100%;display:block}
 .pin{cursor:pointer;transition:transform 0.1s}
 .pin:hover circle{filter:brightness(1.15)}
-#panel{margin-top:10px;min-height:136px;background:#f7f7f5;border-radius:8px;padding:10px 14px;font-size:13px;color:#1a1a1a;border:0.5px solid #e0e0e0}
+#panel{margin-top:10px;min-height:72px;background:#f7f7f5;border-radius:8px;padding:10px 14px;font-size:13px;color:#1a1a1a;border:0.5px solid #e0e0e0}
 .panel-inner{display:flex;gap:12px;align-items:flex-start}
-.panel-photo-wrap{width:180px;height:120px;flex-shrink:0;border-radius:6px;overflow:hidden;border:0.5px solid #e0e0e0;background:#e8edf0}
-.panel-photo-wrap img{width:100%;height:100%;object-fit:cover;display:block}
-.panel-photo-placeholder{width:180px;height:120px;border-radius:6px;flex-shrink:0;background:#e8edf0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:10px;color:#aaa;border:0.5px solid #e0e0e0;text-align:center;padding:8px;gap:4px}
 .panel-info{flex:1;min-width:0}
 .panel-badge{display:inline-block;border-radius:3px;padding:1px 7px;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.04em;margin-bottom:5px}
 .panel-name{font-weight:600;font-size:14px;margin-bottom:3px}
@@ -44,7 +41,7 @@ footer{font-size:10px;color:#aaa;margin-top:10px;text-align:right}
       <div class="dot" style="background:#7F77DD"></div>Other prepaid mobile providers (5)
     </div>
     <div class="toggle-btn" id="btn-money" style="background:#d8f0e7;border-color:#1D9E75;color:#0F6E56" onclick="toggle('money')">
-      <div class="dot" style="background:#1D9E75"></div>Money services (15)
+      <div class="dot" style="background:#1D9E75"></div>Money services (10)
     </div>
     <div class="toggle-btn" id="btn-dollar" style="background:#fbeaf0;border-color:#D4537E;color:#993556" onclick="toggle('dollar')">
       <div class="dot" style="background:#D4537E"></div>Dollar stores (6)
@@ -157,21 +154,6 @@ footer{font-size:10px;color:#aaa;margin-top:10px;text-align:right}
         <polygon points="618,305 614,296 622,296" fill="#1D9E75"/>
         <text x="618" y="294" text-anchor="middle" font-size="7" fill="white" font-weight="600" font-family="sans-serif">$</text>
       </g>
-      <g class="pin" data-cat="money" data-name="Western Union" data-addr="18590 S Dixie Hwy" data-rating="No rating" data-hours="8AM–9PM daily" data-photo="https://lh3.googleusercontent.com/places/ANXAkqH0bAQkYvNfuNk-orDSD-EPgf5Dfmsc-ws49xW9kYqbynietps0mJSmFHX7SOWCvUBAL9Uqz6vbDHZroeBOfnMoB840rstY4Q8=s4800-w800-h600" onclick="showPin(this)">
-        <circle cx="530" cy="305" r="8" fill="#1D9E75" stroke="white" stroke-width="2"/>
-        <polygon points="530,319 526,310 534,310" fill="#1D9E75"/>
-        <text x="530" y="308" text-anchor="middle" font-size="7" fill="white" font-weight="600" font-family="sans-serif">W</text>
-      </g>
-      <g class="pin" data-cat="money" data-name="Western Union" data-addr="19167 S Dixie Hwy" data-rating="3.7 ★ (3 reviews)" data-hours="7AM–10PM daily" data-photo="https://lh3.googleusercontent.com/places/ANXAkqE87pGH_JX3V3CkFHCXbgfupYg55Fp94OrOFpCmt2OJlJN0bKa035z9ODpKGPoLyiyT_JDhXGgEm9-K4vwqaSZHLM0vFWIVRkU=s4800-w800-h600" onclick="showPin(this)">
-        <circle cx="480" cy="348" r="8" fill="#1D9E75" stroke="white" stroke-width="2"/>
-        <polygon points="480,362 476,353 484,353" fill="#1D9E75"/>
-        <text x="480" y="351" text-anchor="middle" font-size="7" fill="white" font-weight="600" font-family="sans-serif">W</text>
-      </g>
-      <g class="pin" data-cat="money" data-name="Western Union" data-addr="18485 S Dixie Hwy" data-rating="No rating" data-hours="7AM–10PM daily" data-photo="https://lh3.googleusercontent.com/places/ANXAkqFiJpt26oH85532QGj84YI8wPDuyWAjR9i324jjhtO7Sy08XKwCiyJk9e_6kTx3O4iKrGIOkiGpTlPLwtNurmn6ZvLFn-EjHPU=s4800-w800-h600" onclick="showPin(this)">
-        <circle cx="563" cy="300" r="8" fill="#1D9E75" stroke="white" stroke-width="2"/>
-        <polygon points="563,314 559,305 567,305" fill="#1D9E75"/>
-        <text x="563" y="303" text-anchor="middle" font-size="7" fill="white" font-weight="600" font-family="sans-serif">W</text>
-      </g>
       <g class="pin" data-cat="money" data-name="Western Union" data-addr="10945 SW 186th St" data-rating="No rating" data-hours="Mon–Sat 9AM–8PM" data-photo="" onclick="showPin(this)">
         <circle cx="347" cy="309" r="8" fill="#1D9E75" stroke="white" stroke-width="2"/>
         <polygon points="347,323 343,314 351,314" fill="#1D9E75"/>
@@ -182,20 +164,10 @@ footer{font-size:10px;color:#aaa;margin-top:10px;text-align:right}
         <polygon points="340,312 336,303 344,303" fill="#1D9E75"/>
         <text x="340" y="301" text-anchor="middle" font-size="6" fill="white" font-weight="600" font-family="sans-serif">MG</text>
       </g>
-      <g class="pin" data-cat="money" data-name="MoneyGram" data-addr="19198 S Dixie Hwy" data-rating="2.3 ★ (3 reviews)" data-hours="8AM–11PM daily" data-photo="https://lh3.googleusercontent.com/places/ANXAkqHdYI6WPRHaVTYsfIlr7tX4h5EU-7QqaSwR5dr8fbGuD3d04vNDb_PhGstDQ9ykD5iRM0xcaeShrfTfqCfgSNjvcOOt9sP8eG0=s4800-w800-h600" onclick="showPin(this)">
-        <circle cx="460" cy="356" r="8" fill="#1D9E75" stroke="white" stroke-width="2"/>
-        <polygon points="460,370 456,361 464,361" fill="#1D9E75"/>
-        <text x="460" y="359" text-anchor="middle" font-size="6" fill="white" font-weight="600" font-family="sans-serif">MG</text>
-      </g>
       <g class="pin" data-cat="money" data-name="MoneyGram" data-addr="11221 SW 152nd St" data-rating="5.0 ★ (1 review)" data-hours="8AM–10PM daily" data-photo="https://lh3.googleusercontent.com/place-photos/AJRVUZMus2xUhikQSX8ugdX_wgIhvLwPUEI3qihVC_ePAOdU3CBLrns89LCehuz0xwOjtSmn_bRqU9J7hpkhF5itjF9wg2Uefc4oO1N_ubZmMsAmSJxcaqHk8REWewBYQtarAFGRk2Z6GanJ45XjCEo=s4800-w800-h600" onclick="showPin(this)">
         <circle cx="198" cy="61" r="8" fill="#1D9E75" stroke="white" stroke-width="2"/>
         <polygon points="198,75 194,66 202,66" fill="#1D9E75"/>
         <text x="198" y="64" text-anchor="middle" font-size="6" fill="white" font-weight="600" font-family="sans-serif">MG</text>
-      </g>
-      <g class="pin" data-cat="money" data-name="MoneyGram" data-addr="11398 Quail Roost Dr" data-rating="1.0 ★ (1 review)" data-hours="8AM–10PM daily" data-photo="https://lh3.googleusercontent.com/places/ANXAkqEVlNPoK6f3C2DUcLPitKSdCCV490-HY4TV-SHvwLxpIHw8YboSLwv9hLzgSl7knVIewWj5Wf0hLzIXILtJUiRKkZWUtXQ26bc=s4800-w800-h600" onclick="showPin(this)">
-        <circle cx="158" cy="322" r="8" fill="#1D9E75" stroke="white" stroke-width="2"/>
-        <polygon points="158,336 154,327 162,327" fill="#1D9E75"/>
-        <text x="158" y="325" text-anchor="middle" font-size="6" fill="white" font-weight="600" font-family="sans-serif">MG</text>
       </g>
       <g class="pin" data-cat="money" data-name="Ria Money Transfer" data-addr="10387 SW 186th St" data-rating="3.7 ★ (3 reviews)" data-hours="Mon–Sat 8AM–5PM" data-photo="https://lh3.googleusercontent.com/places/ANXAkqGUZU1OhMjijHg-48_DM89wPrAz7DdTvYo4uFMjY1QVh59vNBcbpvGVs4M7i7eXFwE695avwjNPLiFRqMErCPbZ-9i3p8gw8vc=s4800-w800-h540" onclick="showPin(this)">
         <circle cx="452" cy="308" r="8" fill="#1D9E75" stroke="white" stroke-width="2"/>
@@ -340,61 +312,17 @@ const active={boost:true,prepaid:true,money:true,dollar:true};
 
 const GOOGLE_API_KEY = 'AIzaSyBeI7HLljOU3LjQe9RTOQVWx8gNOHBhAyc';
 
-// Each entry: [address_for_streetview, heading]
-// heading = compass direction the camera faces toward the storefront
-// 0=North, 90=East, 180=South, 270=West
-const STORES = {
-  'Boost Mobile_11340 Quail Roost Dr':           ['11340 Quail Roost Dr, Miami, FL 33157',        90],
-  'Metro by T-Mobile_11346 SW 184th St':          ['11346 SW 184th St, Miami, FL 33157',           90],
-  'Metro by T-Mobile_18851 S Dixie Hwy':          ['18851 S Dixie Hwy, Cutler Bay, FL 33157',     270],
-  'Metro by T-Mobile_18497 S Dixie Hwy':          ['18497 S Dixie Hwy, Cutler Bay, FL 33157',     270],
-  'Metro by T-Mobile_11271 SW 152nd St':          ['11271 SW 152nd St, Miami, FL 33157',           90],
-  'Metro by T-Mobile_9690 SW 160th St':           ['9690 SW 160th St, Miami, FL 33157',           180],
-  'Amscot (24hr)_18861 SW 117th Ave':             ['18861 SW 117th Ave, Miami, FL 33177',          90],
-  'Check Cashing USA_11348 SW 184th St':          ['11348 SW 184th St, Miami, FL 33157',           90],
-  'The Check Cashing Store_10853 Caribbean Blvd': ['10853 Caribbean Blvd, Miami, FL 33189',         0],
-  'Fast Payday Loans_19993 S Dixie Hwy':          ['19993 S Dixie Hwy, Miami, FL 33157',          270],
-  'Quick Cash Auto Loans_18400 SW 97th Ave':      ['18400 SW 97th Ave, Cutler Bay, FL 33157',      90],
-  'Western Union_18590 S Dixie Hwy':              ['18590 S Dixie Hwy, Cutler Bay, FL 33157',     270],
-  'Western Union_19167 S Dixie Hwy':              ['19167 S Dixie Hwy, Cutler Bay, FL 33157',      90],
-  'Western Union_18485 S Dixie Hwy':              ['18485 S Dixie Hwy, Cutler Bay, FL 33157',     270],
-  'Western Union_10945 SW 186th St':              ['10945 SW 186th St, Cutler Bay, FL 33157',     180],
-  'MoneyGram_10994 SW 184th St':                  ['10994 SW 184th St, Miami, FL 33157',          180],
-  'MoneyGram_19198 S Dixie Hwy':                  ['19198 S Dixie Hwy, Miami, FL 33157',           90],
-  'MoneyGram_11221 SW 152nd St':                  ['11221 SW 152nd St, Miami, FL 33157',          180],
-  'MoneyGram_11398 Quail Roost Dr':               ['11398 Quail Roost Dr, Miami, FL 33157',        90],
-  'Ria Money Transfer_10387 SW 186th St':         ['10387 SW 186th St, Miami, FL 33157',          180],
-  'JN Money Agent_16930 S Dixie Hwy':             ['16930 S Dixie Hwy, Miami, FL 33157',          270],
-  'Family Dollar_9600 SW 160th St':               ['9600 SW 160th St, Miami, FL 33157',           180],
-  'Family Dollar_11520 Quail Roost Dr':            ['11520 Quail Roost Dr, Miami, FL 33157',        90],
-  'Family Dollar_11269 SW 152nd St':              ['11269 SW 152nd St, Miami, FL 33157',           90],
-  'Dollar Tree_19173 S Dixie Hwy':                ['19173 S Dixie Hwy, Miami, FL 33157',           90],
-  'Dollar General_18713 S Dixie Hwy':             ['18713 S Dixie Hwy, Cutler Bay, FL 33157',     270],
-  'Dollar Tree_9825 Hibiscus St, Palmetto Bay':   ['9825 Hibiscus St, Palmetto Bay, FL 33157',    180],
-};
-
 function showPin(el){
   const d = el.dataset, b = BADGE[d.cat];
-  const key = d.name + '_' + d.addr;
-  const store = STORES[key];
-
-  let photoHtml;
-  if(store && GOOGLE_API_KEY){
-    const [address, heading] = store;
-    const encodedAddr = encodeURIComponent(address);
-    const src = `https://maps.googleapis.com/maps/api/streetview?size=360x220&location=${encodedAddr}&heading=${heading}&fov=80&pitch=5&source=outdoor&return_error_code=true&key=${GOOGLE_API_KEY}`;
-    photoHtml = `<div class="panel-photo-wrap"><img src="${src}" alt="${d.name}" onerror="this.parentNode.innerHTML='<div style=&quot;font-size:10px;color:#aaa;text-align:center;padding:16px&quot;>No street view available</div>'"></div>`;
-  } else {
-    photoHtml = `<div class="panel-photo-placeholder">No photo available</div>`;
-  }
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(d.name + ' ' + d.addr + ' Miami FL')}`;
 
   document.getElementById('panel').innerHTML =
     '<div class="panel-inner">'
-    + photoHtml
-    + '<div class="panel-info">'
+    + '<div class="panel-info" style="width:100%">'
     +   `<span class="panel-badge" style="background:${b.bg};color:${b.text}">${b.label}</span>`
     +   `<div class="panel-name">${d.name}</div>`
     +   `<div class="panel-meta">${d.addr}<br>${d.rating}<br>${d.hours}</div>`
+    +   `<a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;padding:5px 12px;background:#1a1a1a;color:white;border-radius:5px;font-size:11px;font-weight:500;text-decoration:none;">View on Google Maps ↗</a>`
     + '</div>'
     + '</div>';
 }
