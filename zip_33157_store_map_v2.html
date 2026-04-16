@@ -374,7 +374,19 @@ footer{font-size:10px;color:#aaa;margin-top:10px;text-align:right}
     <div style="font-size:10px;color:#aaa;text-align:right">Data: Google Places · Fierce Network · Light Reading · EchoStar SEC filings · ZIP 33157 Miami/Cutler Bay, FL</div>
   </div>
 
+  <!-- PDF Download Button -->
+  <div style="margin-top:20px;padding-top:16px;border-top:0.5px solid #e0e0e0;display:flex;justify-content:flex-end">
+    <button onclick="downloadPDF()" id="pdf-btn" style="display:flex;align-items:center;gap:8px;padding:9px 20px;background:#1a1a1a;color:white;border:none;border-radius:7px;font-size:13px;font-weight:500;cursor:pointer;font-family:'Aptos','Segoe UI',sans-serif">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Download as PDF
+    </button>
+  </div>
+
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
 <script>
 const BADGE={
@@ -400,6 +412,26 @@ function showPin(el){
     +   `<a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:8px;padding:5px 12px;background:#1a1a1a;color:white;border-radius:5px;font-size:11px;font-weight:500;text-decoration:none;">View on Google Maps ↗</a>`
     + '</div>'
     + '</div>';
+}
+
+function downloadPDF(){
+  const btn = document.getElementById('pdf-btn');
+  btn.textContent = 'Generating PDF...';
+  btn.disabled = true;
+
+  const el = document.getElementById('wrap');
+  const opt = {
+    margin:       [10, 10, 10, 10],
+    filename:     'ZIP_33157_Retail_Competitive_Map.pdf',
+    image:        { type: 'jpeg', quality: 0.98 },
+    html2canvas:  { scale: 2, useCORS: true, logging: false },
+    jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+  };
+
+  html2pdf().set(opt).from(el).save().then(() => {
+    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v8M4 6l3 3 3-3M2 11h10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg> Download as PDF';
+    btn.disabled = false;
+  });
 }
 
 let heatmapOn = false;
